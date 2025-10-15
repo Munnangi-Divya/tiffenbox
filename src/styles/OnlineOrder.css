@@ -1,0 +1,144 @@
+/* --- ONLINE ORDER SECTION STYLING --- */
+.online-order-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh; /* Adjust height as needed */
+  background-color: #000; /* Dark background */
+  color: #fff; /* White text */
+  padding: 80px 40px;
+  position: relative; /* For positioning graphic elements */
+  overflow: hidden; /* Ensure elements don't spill */
+}
+
+.online-order-left {
+  flex: 1;
+  max-width: 50%; /* Adjust width for text content */
+  padding-right: 40px;
+}
+
+.online-order-subheading {
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #ffc107; /* Yellow accent */
+  text-transform: uppercase;
+}
+
+.online-order-headline {
+  font-size: 3em; /* Large, bold headline */
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  font-family: 'Montserrat', sans-serif; /* Consistent font */
+}
+
+.online-order-description {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #ccc; /* Slightly muted for description */
+}
+
+.order-online-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff; /* White border */
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.order-online-btn:hover {
+  background-color: #ffc107; /* Yellow background on hover */
+  color: #000; /* Black text on hover */
+  border-color: #ffc107; /* Yellow border on hover */
+}
+
+.online-order-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Align graphic to the right */
+  align-items: center;
+  position: relative; /* For positioning child elements */
+  min-height: 400px; /* Ensure space for graphic */
+}
+
+.delivery-graphic {
+  width: 90%; /* Adjust size of the graphic */
+  height: auto;
+  opacity: 0.2; /* Make it subtle, as in the screenshot */
+  filter: grayscale(100%) brightness(200%); /* Enhance the subtle white line look */
+  position: absolute;
+  right: -5%; /* Slightly off to the right */
+  bottom: 0;
+  max-width: 600px; /* Control max size */
+}
+
+.mini-dish-img {
+  position: absolute;
+  top: 10%; /* Position near the top */
+  right: 8%; /* Position to the right */
+  width: 120px; /* Size of the small dish */
+  height: 120px;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite; /* Gentle floating animation */
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .online-order-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .online-order-left {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .online-order-headline {
+    font-size: 2.5em;
+  }
+
+  .online-order-right {
+    min-height: 300px; /* Reduce height for smaller screens */
+    width: 100%;
+    justify-content: center;
+  }
+
+  .delivery-graphic {
+    width: 80%;
+    right: 0;
+    bottom: 0;
+    position: relative; /* Adjust positioning for stacking */
+  }
+
+  .mini-dish-img {
+    top: 5%;
+    right: 5%;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .online-order-headline {
+    font-size: 2em;
+  }
+  .online-order-description {
+    font-size: 1em;
+  }
+}

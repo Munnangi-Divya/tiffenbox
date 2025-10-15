@@ -1,0 +1,117 @@
+/* --- BRAND CHEF SECTION STYLING --- */
+.brand-chef-section {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.chef-subheading {
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.chef-headline {
+  font-size: 2.8em;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 60px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* --- CONTENT LAYOUT --- */
+.chef-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start; /* Align items to the top */
+  text-align: left;
+}
+
+/* Left Column: Image */
+.chef-image-container {
+  flex: 1;
+  position: relative;
+  max-width: 50%; /* Image takes roughly half the space */
+  padding-right: 40px;
+}
+
+.chef-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Optional: Enhance the warm, dark look */
+  filter: brightness(110%) contrast(110%); 
+}
+
+.chef-signature {
+  position: absolute;
+  bottom: 10px;
+  right: -50px; /* Pull it off the image and into the text area slightly */
+  font-family: 'Brush Script MT', 'cursive', sans-serif; /* Use an elegant cursive font */
+  font-size: 4em; 
+  font-weight: 400;
+  color: #fff; /* White signature */
+  opacity: 0.8; 
+  pointer-events: none; /* Make sure it doesn't block clicks */
+}
+
+/* Right Column: Text Bio */
+.chef-bio-container {
+  flex: 1;
+  max-width: 50%;
+  padding-left: 40px;
+}
+
+.chef-name {
+  font-size: 2.5em;
+  font-weight: 800;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.chef-title {
+  font-size: 1.1em;
+  font-style: italic;
+  color: #ffc107; /* Yellow accent */
+  margin-bottom: 30px;
+}
+
+.chef-description {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 992px) {
+  .chef-content {
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .chef-image-container, .chef-bio-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .chef-image-container {
+    margin-bottom: 40px;
+  }
+
+  .chef-name {
+    font-size: 2em;
+  }
+
+  .chef-signature {
+    bottom: -20px; /* Move it down when stacked */
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 3em;
+  }
+}

@@ -1,0 +1,114 @@
+/* --- TESTIMONIALS SECTION STYLING --- */
+.testimonials-section {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 0 80px 0; /* Reduced horizontal padding here, handled by carousel */
+  text-align: center;
+}
+
+.testimonial-subheading {
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.testimonial-headline {
+  font-size: 2.8em;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 60px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+/* --- CAROUSEL/SCROLLING CONTAINER --- */
+.reviews-carousel-container {
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  padding: 0 40px; /* Padding for the visible cards at the edges */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar for Webkit (Chrome, Safari) */
+.reviews-carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.reviews-carousel-track {
+  display: flex;
+  gap: 30px; /* Space between the testimonial cards */
+  padding-bottom: 20px; /* Space for a potential hidden scrollbar */
+  width: max-content; /* Allows the track to expand beyond the viewport */
+}
+
+/* --- INDIVIDUAL REVIEW CARD --- */
+.review-card {
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  width: 350px; /* Fixed width for the cards */
+  background-color: transparent; 
+  text-align: left;
+  padding: 20px 0;
+}
+
+.star-rating {
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.star-icon {
+  color: #ffc107; /* Yellow accent color for stars */
+  font-size: 1.2em;
+  margin-right: 2px;
+}
+
+.review-quote {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+/* Reviewer Info */
+.reviewer-info {
+  display: flex;
+  align-items: center;
+}
+
+.reviewer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.reviewer-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewer-name {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.review-time {
+  font-size: 0.8em;
+  color: #888;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .review-card {
+    width: 90vw; /* Take up most of the screen width on mobile */
+    max-width: 400px;
+  }
+}
